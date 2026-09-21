@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+:root {
+    --blue: #5195E7;
+    --green: #B2C87B;
+    --yellow: #F6D56A;
+    --red: #CD7F58;
+    --black: #1E1E1E;
+}
+
+#taskcontainer::-webkit-scrollbar {
+    display: none;
+}
