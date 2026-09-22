@@ -6,6 +6,15 @@ This is an educational/portfolio project created for demonstration purposes.
 
 **Please do not enter real passwords, personal information, or any other sensitive data.** Any login credentials used in this project are for demonstration purposes only.
 
+## Features
+
+- Admin and employee dashboards
+- Employee task assignment
+- Task status management
+- Login authentication
+- Persistent data using localStorage
+- Responsive React UI
+
 ---
 
 # React + Vite
