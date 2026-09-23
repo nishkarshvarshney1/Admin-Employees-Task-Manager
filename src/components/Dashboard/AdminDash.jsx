@@ -5,7 +5,7 @@ import AllTask from '../others/AdminDash/AllTask'
 
 const AdminDash = ({handleLogout}) => {
   return (
-    <div id='admindash' className='bg-[#101010] h-screen px-15 text-white'>
+    <div id='admindash' className='bg-[#101010] h-screen text-white'>
       <Header handleLogout={handleLogout}/>
       <CreateTask />
       <AllTask />

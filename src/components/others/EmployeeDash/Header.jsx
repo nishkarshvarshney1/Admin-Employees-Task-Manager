@@ -1,8 +1,9 @@
+import Hero from '../../../assets/image header.png'
 
 const Header = ({ handleLogout, currentUser }) => {
     const storage = localStorage.getItem('loggedInUser') ? localStorage : sessionStorage
     return (
-        <div className='flex justify-between py-10 items-center text-white '>
+        <div className='flex justify-between py-10 items-center text-white' style={{background: `url(${Hero}) center/cover no-repeat`}}>
             <div>
                 <h2 className='text-4xl'>Hello,</h2>
                 <h1 className='text-5xl font-semibold tracking-tight'>
