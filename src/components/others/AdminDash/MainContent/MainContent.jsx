@@ -4,7 +4,7 @@ import RightMainContent from './RightMainContent';
 
 const MainContent = () => {
   return (
-    <div className='relative z-2 flex justify-between gap-5 h-full bg-amber-900'>
+    <div className='relative z-2 flex justify-between gap-5 h-full'>
         <LeftMainContent />
         <RightMainContent />
     </div>

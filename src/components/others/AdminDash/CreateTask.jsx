@@ -38,15 +38,15 @@ const CreateTask = () => {
     setTaskTitle('')
   }
   return (
-    <div className='p-5 flex flex-col gap-2 text-(--light-pink)'>
+    <div className='p-5 flex flex-col gap-2 text-(--light-pink) bg-(--dark-purple)'>
       <div className='flex items-center gap-2'>
         <div className='w-5 h-5 rounded-full bg-(--light-pink) flex items-center justify-center'><Plus size={16} strokeWidth={3} stroke="var(--dark-purple)"/></div>
-      <h1 className='text-2xl'>Create New Task</h1>
+      <h1 className='text-lg'>Create New Task</h1>
       </div>
       <form onSubmit={(e) => {
         submitHandler(e)
       }}
-        className='flex justify-between align-center text-sm gap-7'>
+        className='flex justify-between align-center text-xs gap-7'>
         <div className='flex flex-col w-[48%] gap-1'>
           <h2>Task Title</h2>
           <input onChange={(e) => {

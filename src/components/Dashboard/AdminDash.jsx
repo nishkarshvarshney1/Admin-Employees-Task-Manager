@@ -1,6 +1,5 @@
 import React from 'react'
 import Header from '../others/EmployeeDash/Header'
-import AllTask from '../others/AdminDash/AllTask'
 import HeaderBg from '../others/AdminDash/HeaderBg';
 import LeftContent from '../others/AdminDash/LeftContent';
 import RightContent from '../others/AdminDash/RightContent';
@@ -13,7 +12,6 @@ const AdminDash = ({handleLogout}) => {
       
       <LeftContent />
       <RightContent handleLogout={handleLogout}/>
-      {/* <AllTask /> */}
     </div>
   )
 }
