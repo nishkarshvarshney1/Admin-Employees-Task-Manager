@@ -6,6 +6,11 @@
     --yellow: #F6D56A;
     --red: #CD7F58;
     --black: #1E1E1E;
+    --purple: #6F4FE5;
+    --dark-purple: #181A43;
+    --very-dark: #0D0936;
+    --border-color: #262857;
+    --light-pink: #DED4FC;
 }
 
 #taskcontainer::-webkit-scrollbar {
