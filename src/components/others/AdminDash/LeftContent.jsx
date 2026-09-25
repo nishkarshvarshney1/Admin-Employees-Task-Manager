@@ -1,7 +1,7 @@
 import React from 'react'
 import Menu from './Menu';
 import { LogOut } from 'lucide-react';
-import Mountain from '../../../assets/purple and White Mountains.png'
+import Mountain from '../../../assets/Purple and White Mountains.png'
 
 const LeftContent = () => {
   return (
