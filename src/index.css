@@ -17,6 +17,15 @@
     --light-pink: #DED4FC;
 }
 
-#taskcontainer::-webkit-scrollbar {
+.no-scrollbar::-webkit-scrollbar {
     display: none;
+}
+
+#pie-chart {
+    background: conic-gradient(
+        blue 0% 20%,
+        yellow 20% 50%,
+        green 50% 65%,
+        red 65% 100%
+    );
 }

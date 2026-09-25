@@ -5,7 +5,7 @@ import TotalTask from './TotalTask';
 
 const RightContent = ({handleLogout}) => {
   return (
-    <div className='w-[85%] bg-(--very-dark) px-4 relative'>
+    <div className='w-[85%] bg-(--very-dark) px-4 relative flex flex-col'>
       <Header handleLogout={handleLogout}/>
       <MainContent />
     </div>

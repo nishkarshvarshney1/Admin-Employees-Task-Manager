@@ -20,9 +20,9 @@ const Header = ({ handleLogout, currentUser }) => {
                     <ChevronDown size={16}/>
                 </button>
                 <div className='border border-(--border-color) rounded-lg p-3 bg-(--dark-purple)'>
-                    <h6 className='text-sm flex items-center gap-2'><CalendarDays size={14} />Wed, Sep 23, 2026</h6>
-                    <h6 className='text-2xl'>11 : 14 PM</h6>
-                    <h6 className='text-xs'>"Small steps, big progress."</h6>
+                    <h6 className='text-xs flex items-center gap-2'><CalendarDays size={14} />Wed, Sep 23, 2026</h6>
+                    <h6 className='text-lg'>11 : 14 PM</h6>
+                    <h6 className='text-[0.65rem]'>"Small steps, big progress."</h6>
                 </div>
             </div>
             {/* <button onClick={handleLogout}

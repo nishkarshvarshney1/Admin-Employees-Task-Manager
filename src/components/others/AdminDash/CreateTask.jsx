@@ -38,10 +38,10 @@ const CreateTask = () => {
     setTaskTitle('')
   }
   return (
-    <div className='p-5 flex flex-col gap-2 text-(--light-pink) bg-(--dark-purple)'>
+    <div className='p-5 flex flex-col gap-3 text-(--light-pink) bg-(--dark-purple) rounded-lg border border-(--border-color)'>
       <div className='flex items-center gap-2'>
         <div className='w-5 h-5 rounded-full bg-(--light-pink) flex items-center justify-center'><Plus size={16} strokeWidth={3} stroke="var(--dark-purple)"/></div>
-      <h1 className='text-lg'>Create New Task</h1>
+      <h1 className='text-base'>Create New Task</h1>
       </div>
       <form onSubmit={(e) => {
         submitHandler(e)
@@ -80,7 +80,7 @@ const CreateTask = () => {
             setTaskDescription(e.target.value)
           }}
             value={taskDescription}
-            placeholder="Detailed description of the task (Max 500 word)" className='border-white border rounded-sm p-2 h-42' cols="50"></textarea>
+            placeholder="Detailed description of the task (Max 500 word)" className='border-white border rounded-sm p-2 h-36' cols="50"></textarea>
             </div>
           <button className='bg-(--purple) py-3 rounded-sm hover:bg-green-300/70 transition cursor-pointer active:scale-90 hover:scale-101'>Create Task</button>
           </div>
