@@ -12,9 +12,12 @@
     --black: #1E1E1E;
     --purple: #6F4FE5;
     --dark-purple: #181A43;
-    --very-dark: #0D0936;
+    --very-dark: #0E0A36;
     --border-color: #262857;
     --light-pink: #DED4FC;
+    --border-yellow: #322A52;
+    --border-red: #322252;
+    --border-green: #253452;
 }
 
 .no-scrollbar::-webkit-scrollbar {
@@ -28,4 +31,12 @@
         green 50% 65%,
         red 65% 100%
     );
+}
+
+#total-tasks {
+    background: linear-gradient(
+        to right,
+        #6f4fe576,
+        #181a43
+    )
 }

@@ -53,25 +53,25 @@ const CreateTask = () => {
             setTaskTitle(e.target.value)
           }}
             value={taskTitle}
-            type="text" placeholder='Make a UI design' className='border border-white px-2 py-1 rounded-sm mb-2' />
+            type="text" placeholder='Make a UI design' className='border border-[#62679C] px-2 py-2 rounded-sm mt-1 mb-3' />
           <h2>Date</h2>
           <input onChange={(e) => {
             setDueDate(e.target.value)
           }}
             value={dueDate}
-            type="date" className='border border-white px-2 py-1 rounded-sm mb-2' />
+            type="date" className='border border-[#62679C] px-2 py-2 rounded-sm mt-1 mb-3' />
           <h2>Assign To</h2>
           <input onChange={(e) => {
             setAssignedTo(e.target.value)
           }}
             value={assignedTo}
-            type="text" placeholder='Name...' className='border border-white px-2 py-1 rounded-sm mb-2' />
+            type="text" placeholder='Name...' className='border border-[#62679C] px-2 py-2 mt-1 rounded-sm mb-3' />
           <h2>Priority</h2>
           <input onChange={(e) => {
             setPriority(e.target.value)
           }}
             value={priority}
-            type="text" placeholder='Design, Development, etc...' className='border border-white px-2 py-1 rounded-sm' />
+            type="text" placeholder='Design, Development, etc...' className='border border-[#62679C] px-2 py-2 mt-1 rounded-sm' />
         </div>
         <div className='flex flex-col justify-between'>
         <div className='flex flex-col gap-1'>
@@ -80,7 +80,7 @@ const CreateTask = () => {
             setTaskDescription(e.target.value)
           }}
             value={taskDescription}
-            placeholder="Detailed description of the task (Max 500 word)" className='border-white border rounded-sm p-2 h-36' cols="50"></textarea>
+            placeholder="Detailed description of the task (Max 500 word)" className='border-[#62679C] border rounded-sm p-2 h-49 mt-1' cols="50"></textarea>
             </div>
           <button className='bg-(--purple) py-3 rounded-sm hover:bg-green-300/70 transition cursor-pointer active:scale-90 hover:scale-101'>Create Task</button>
           </div>

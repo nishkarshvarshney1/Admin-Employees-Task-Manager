@@ -4,7 +4,7 @@ import { CalendarDays, ChevronDown } from 'lucide-react'
 const Header = ({ handleLogout, currentUser }) => {
     const storage = localStorage.getItem('loggedInUser') ? localStorage : sessionStorage
     return (
-        <div className='flex justify-between py-3 items-center text-white bg-transparent relative z-2'>
+        <div className='flex justify-between py-3 items-center text-white bg-transparent relative z-11'>
             <div className='flex flex-col gap-1'>
                 <h2 className='text-4xl'>Hello, {JSON.parse(storage.getItem('loggedInUser')).role === 'admin'
                     ? 'Nishkarsh'

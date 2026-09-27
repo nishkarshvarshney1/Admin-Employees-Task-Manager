@@ -9,7 +9,7 @@ const RecentActivity = () => {
             </div>
             <div className='flex flex-col gap-3'>
                 <div className='flex items-center gap-3'>
-                    <div className='w-7 h-7 rounded-full bg-green-400/30 flex items-center justify-center'>
+                    <div className='w-7 h-7 rounded-full bg-green-400/7 flex items-center justify-center'>
                         <div className='w-3 h-3 bg-green-400 rounded-full'></div>
                     </div>
                     <div className='flex flex-col text-[0.70rem]'>
@@ -18,7 +18,7 @@ const RecentActivity = () => {
                     </div>
                 </div>
                 <div className='flex items-center gap-3'>
-                    <div className='w-7 h-7 rounded-full bg-blue-400/30 flex items-center justify-center'>
+                    <div className='w-7 h-7 rounded-full bg-blue-400/7 flex items-center justify-center'>
                         <div className='w-3 h-3 bg-blue-400 rounded-full'></div>
                     </div>
                     <div className='flex flex-col text-[0.70rem]'>
@@ -27,7 +27,7 @@ const RecentActivity = () => {
                     </div>
                 </div>
                 <div className='flex items-center gap-3'>
-                    <div className='w-7 h-7 rounded-full bg-yellow-400/30 flex items-center justify-center'>
+                    <div className='w-7 h-7 rounded-full bg-yellow-400/7 flex items-center justify-center'>
                         <div className='w-3 h-3 bg-yellow-400 rounded-full'></div>
                     </div>
                     <div className='flex flex-col text-[0.70rem]'>
@@ -36,7 +36,7 @@ const RecentActivity = () => {
                     </div>
                 </div>
                 <div className='flex items-center gap-3'>
-                    <div className='w-7 h-7 rounded-full bg-red-400/30 flex items-center justify-center'>
+                    <div className='w-7 h-7 rounded-full bg-red-400/7 flex items-center justify-center'>
                         <div className='w-3 h-3 bg-red-400 rounded-full'></div>
                     </div>
                     <div className='flex flex-col text-[0.70rem]'>

@@ -3,7 +3,7 @@ import {CalendarRange, ChartNoAxesColumn, House, Settings, Users} from 'lucide-r
 
 const Menu = () => {
   return (
-    <div className='flex flex-col py-3 px-4 gap-2'>
+    <div className='flex flex-col py-3 px-4 gap-2 relative z-11'>
         <div className='p-3 bg-(--purple) rounded-xl flex gap-3 text-sm items-center cursor-pointer'>
           <House size={20}/>
           <span>Dashboard</span>
