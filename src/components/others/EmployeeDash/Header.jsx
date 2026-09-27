@@ -1,7 +1,7 @@
 import Hero from '../../../assets/image header.png'
 import { CalendarDays, ChevronDown } from 'lucide-react'
 
-const Header = ({ handleLogout, currentUser }) => {
+const Header = ({ currentUser }) => {
     const storage = localStorage.getItem('loggedInUser') ? localStorage : sessionStorage
     return (
         <div className='flex justify-between py-3 items-center text-white bg-transparent relative z-11'>
@@ -25,8 +25,6 @@ const Header = ({ handleLogout, currentUser }) => {
                     <h6 className='text-[0.65rem]'>"Small steps, big progress."</h6>
                 </div>
             </div>
-            {/* <button onClick={handleLogout}
-                className='bg-red-400 px-5 py-2 rounded-md font-semibold cursor-pointer'>Log Out</button> */}
         </div>
     )
 }

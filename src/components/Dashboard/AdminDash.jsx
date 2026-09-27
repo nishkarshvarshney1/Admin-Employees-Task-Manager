@@ -10,8 +10,8 @@ const AdminDash = ({handleLogout}) => {
     <div id='admindash' className='bg-(--very-dark) h-screen text-white relative flex'>
       <HeaderBg />
       
-      <LeftContent />
-      <RightContent handleLogout={handleLogout}/>
+      <LeftContent handleLogout={handleLogout}/>
+      <RightContent />
     </div>
   )
 }
