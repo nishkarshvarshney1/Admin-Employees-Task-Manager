@@ -8,7 +8,7 @@ const LeftContent = ({ handleLogout }) => {
   const storage = localStorage.getItem('loggedInUser') ? localStorage : sessionStorage
   const user = JSON.parse(storage.getItem('loggedInUser')).role
   return (
-    <div className='h-full w-[15%] bg-transparent z-11 backdrop-blur-sm border-r border-(--border-color) flex flex-col gap-2 relative'>
+    <div className='h-full w-[15%] bg-transparent z-11 backdrop-blur-xs border-r border-(--border-color) flex flex-col gap-2 relative'>
       <div className='flex items-center py-7 px-3 border-b border-(--border-color) relative z-11'>
         <img src={Mountain} alt="" className='h-12' />
         <h1 className='text-lg'>Task Manager</h1>

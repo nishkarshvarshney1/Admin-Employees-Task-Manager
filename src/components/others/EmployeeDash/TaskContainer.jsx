@@ -7,7 +7,7 @@ import FailedTask from '../../TaskList/FailedTask';
 const TaskContainer = ({ userData }) => {
   const numbers = Object.values(userData)[0]
   return (
-    <div className='no-scrollbar mt-20 flex items-center gap-5 overflow-x-auto'>
+    <div className='no-scrollbar mt-5 flex flex-col w-full gap-1 overflow-y-auto'>
       {numbers.tasks.filter((e) => e.newTask).map((e, idx) => <NewTask key={idx} data={e} />)}
       {numbers.tasks.filter((e) => e.completed).map((e, idx) => <CompleteTask key={idx} data={e} />)}
       {numbers.tasks.filter((e) => e.active).map((e, idx) => <AcceptTask key={idx} data={e} />)}

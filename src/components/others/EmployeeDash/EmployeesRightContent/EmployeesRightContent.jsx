@@ -8,6 +8,7 @@ const EmployeesRightContent = ({handleLogout, userData}) => {
     <div className='w-[85%] px-5'>
       <Header handleLogout={handleLogout} currentUser={Object.values(userData)[0]} />
       <TaskList userData={userData}/>
+      <TaskContainer userData={userData}/>
     </div>
   )
 }
