@@ -2,7 +2,8 @@ import React from 'react'
 import { Calendar, CalendarRange, ChartNoAxesColumn, Folder, House, Logs, Settings, Users } from 'lucide-react'
 
 const Menu = () => {
-  const user = JSON.parse(localStorage.getItem('loggedInUser')).role
+  const storage = localStorage.getItem('loggedInUser') ? localStorage : sessionStorage
+  const user = JSON.parse(storage.getItem('loggedInUser')).role
   return (
     <div className='flex flex-col py-3 px-4 gap-2 relative z-11'>
       {user === 'admin' ? (
