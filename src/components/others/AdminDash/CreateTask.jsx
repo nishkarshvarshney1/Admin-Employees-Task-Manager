@@ -59,7 +59,7 @@ const CreateTask = () => {
             setDueDate(e.target.value)
           }}
             value={dueDate}
-            type="date" className='border border-[#62679C] px-2 py-2 rounded-sm mt-1 mb-3' />
+            type="date" className='border border-[#62679C] px-2 py-2 rounded-sm mt-1 mb-3 [&::-webkit-calendar-picker-indicator]:invert' />
           <h2>Assign To</h2>
           <input onChange={(e) => {
             setAssignedTo(e.target.value)
