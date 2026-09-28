@@ -5,6 +5,8 @@ import Mountain from '../../../assets/Purple and White Mountains.png'
 import dusk from '../../../assets/image23.png'
 
 const LeftContent = ({ handleLogout }) => {
+  const storage = localStorage.getItem('loggedInUser') ? localStorage : sessionStorage
+  const user = JSON.parse(storage.getItem('loggedInUser')).role
   return (
     <div className='h-full w-[15%] bg-transparent z-11 backdrop-blur-sm border-r border-(--border-color) flex flex-col gap-2 relative'>
       <div className='flex items-center py-7 px-3 border-b border-(--border-color) relative z-11'>
@@ -17,9 +19,13 @@ const LeftContent = ({ handleLogout }) => {
         <LogOut />
         <span>Log Out</span>
       </button>
-      <footer className='absolute bottom-0 left-0'>
+      {user === 'admin' ? (
+        <>
+        <footer className='absolute bottom-0 left-0'>
         <img src={dusk} alt="" className='blur-[1px]' />
       </footer>
+        </>
+        ) : null}
     </div>
   )
 }
