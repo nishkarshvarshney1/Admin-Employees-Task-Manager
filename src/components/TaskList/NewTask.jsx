@@ -1,15 +1,19 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import {X, Check, CalendarDays, Dot} from 'lucide-react'
 import { AuthContext } from '../../context/AuthProvider';
 
 const NewTask = ({data}) => {
   const authData = useContext(AuthContext)
+  const [expand, setExpand] = useState(false)
   console.log(data)
   return (
-    <div className='grid grid-cols-[1fr_1fr_1fr] gap-5 items-center backdrop-blur-lg px-5 py-3 border border-(--light-border) rounded-lg'>
+    <div className='grid grid-cols-[1fr_1fr_1fr] cursor-pointer gap-5 items-center backdrop-blur-lg px-5 py-3 border border-(--light-border) rounded-lg'>
       <div>
         <h1 className='text-base'>{data.taskTitle}</h1>
-        <p className='text-xs text-(--light-pink)'>{data.taskDescription}</p>
+        <p onClick={()=>{
+          setExpand(!expand)
+        }}
+         className={`text-xs text-(--light-pink) ${expand ? '' : 'line-clamp-1'}`}>{data.taskDescription}</p>
       </div>
       <div className='flex gap-5 justify-self-center'>
         <span className='text-yellow-400 bg-(--yellow) px-3 py-1.5 text-xs rounded-lg border border-yellow-600/50'>{data.taskData.priority}</span>
