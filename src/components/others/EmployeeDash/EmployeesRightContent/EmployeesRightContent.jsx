@@ -5,7 +5,7 @@ import TaskList from '../TaskList';
 
 const EmployeesRightContent = ({handleLogout, userData}) => {
   return (
-    <div className='w-[85%] px-5'>
+    <div className='w-[85%] px-5 flex flex-col'>
       <Header handleLogout={handleLogout} currentUser={Object.values(userData)[0]} />
       <TaskList userData={userData}/>
       <TaskContainer userData={userData}/>

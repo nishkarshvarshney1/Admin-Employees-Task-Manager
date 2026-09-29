@@ -3,7 +3,7 @@ import React from 'react'
 const TaskList = ({userData}) => {
   const numbers = Object.values(userData)[0]
   return (
-    <div className='flex gap-5 mt-5 '>
+    <div className='flex gap-5 '>
      <div className='text-white flex flex-1 flex-col gap-2 bg-linear-to-r from-(--blue)/80 border border-[#3D47AE] to-(--dark-purple)/50 p-5 backdrop-blur-sm rounded-lg'>
       <h2 className='text-4xl font-bold'>{numbers.newTask}</h2>
       <h3 className='text-base font-medium'>New Task</h3>

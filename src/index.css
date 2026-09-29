@@ -18,6 +18,7 @@
     --border-yellow: #322A52;
     --border-red: #322252;
     --border-green: #253452;
+    --light-border: #6a4bce;
 }
 
 .no-scrollbar::-webkit-scrollbar {
