@@ -8,11 +8,12 @@ import EmployeesRightContent from '../others/EmployeeDash/EmployeesRightContent/
 
 const EmployeeDash = ({handleLogout, userData}) => {
   return (
-    <div className='h-screen bg-[url(/main-bg.png)] bg-center bg-cover text-(--light-pink) flex'>
+    <div className='h-screen bg-[url(/main-bg.png)] bg-center bg-cover text-(--light-pink) flex relative'>
       <LeftContent handleLogout={handleLogout}/>
       <EmployeesRightContent userData={userData} handleLogout={handleLogout}/>
       {/* <TaskList userData={userData}/> */}
       {/* <TaskContainer userData={userData}/> */}
+      
     </div>
   )
 }
