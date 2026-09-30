@@ -62,20 +62,20 @@ const CreateTask = () => {
               setTaskTitle(e.target.value)
             }}
               value={taskTitle}
-              type="text" placeholder='Make a UI design' className='focus:outline-(--purple) border border-(--border-color) bg-[#121432]/50 py-2.5 px-3 rounded-lg mt-1 mb-3' />
+              type="text" placeholder='Make a UI design' className='focus:outline-none focus:border-(--purple) focus:shadow-[0_0_2px_var(--purple)] border border-(--border-color) bg-[#121432]/50 py-2.5 px-3 rounded-lg mt-1 mb-3' />
             <h2>Date</h2>
             <input onChange={(e) => {
               setDueDate(e.target.value)
             }}
               value={dueDate}
-              type="date" className='border border-(--border-color) py-2.5 px-3 rounded-lg bg-[#121432]/50 mt-1 mb-3 [&::-webkit-calendar-picker-indicator]:invert' />
+              type="date" className='focus:outline-none focus:border-(--purple) focus:shadow-[0_0_2px_var(--purple)] border border-(--border-color) py-2.5 px-3 rounded-lg bg-[#121432]/50 mt-1 mb-3 [&::-webkit-calendar-picker-indicator]:invert' />
             <h2>Assign To</h2>
             <select onChange={(e) => {
               setAssignedTo(e.target.value)
             }}
               value={assignedTo}
               name="Employees" id="employees"
-              className='border border-(--border-color) py-2.5 px-3 rounded-lg mt-1 mb-3 bg-[#121432]/50 appearance-none relative'>
+              className='focus:outline-none focus:border-(--purple) focus:shadow-[0_0_2px_var(--purple)] border border-(--border-color) py-2.5 px-3 rounded-lg mt-1 mb-3 bg-[#121432]/50 appearance-none relative'>
               <option value=''>Select Employee</option>
               {employees.map((e, idx) => {
                 const employeesData = Object.values(e)[0]
@@ -113,7 +113,7 @@ const CreateTask = () => {
                 setTaskDescription(e.target.value)
               }}
                 value={taskDescription}
-                placeholder="Detailed description of the task" className='border bg-[#121432]/50 border-(--border-color) rounded-xl py-2.5 px-3 h-51 mt-2 transition' cols="55"></textarea>
+                placeholder="Detailed description of the task" className='focus:outline-none focus:border-(--purple) focus:shadow-[0_0_2px_var(--purple)] border bg-[#121432]/50 border-(--border-color) rounded-xl py-2.5 px-3 h-51 mt-2 transition' cols="55"></textarea>
             </div>
             <button className='bg-linear-to-r from-(--purple)/80 to-(--dark-purple) py-3 rounded-xl transition cursor-pointer active:scale-95 border border-(--border-color) hover:bg-(--purple)'>Create Task</button>
           </div>
