@@ -25,10 +25,12 @@ const Header = ({ currentUser }) => {
                     </span>
                     <ChevronDown size={16} />
                 </button>
-                <div className='border border-(--border-color) rounded-2xl p-3 bg-(--dark-purple)'>
-                    <h6 className='text-xs flex items-center gap-2'><CalendarDays size={14} />Wed, Sep 23, 2026</h6>
-                    <h6 className='text-lg'>11 : 14 PM</h6>
-                    <h6 className='text-[0.65rem]'>"Small steps, big progress."</h6>
+                <div className='p-px rounded-2xl bg-linear-to-br from-(--purple) via-(--border-color) to-(--purple)'>
+                    <div className='rounded-2xl p-3 bg-(--dark-purple)'>
+                        <h6 className='text-xs flex items-center gap-2'><CalendarDays size={14} />Wed, Sep 23, 2026</h6>
+                        <h6 className='text-lg'>11 : 14 PM</h6>
+                        <h6 className='text-[0.65rem]'>"Small steps, big progress."</h6>
+                    </div>
                 </div>
             </div>
         </div>

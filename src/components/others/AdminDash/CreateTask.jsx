@@ -62,7 +62,7 @@ const CreateTask = () => {
               setTaskTitle(e.target.value)
             }}
               value={taskTitle}
-              type="text" placeholder='Make a UI design' className='border border-(--border-color) bg-[#121432]/50 py-2.5 px-3 rounded-lg mt-1 mb-3' />
+              type="text" placeholder='Make a UI design' className='focus:outline-(--purple) border border-(--border-color) bg-[#121432]/50 py-2.5 px-3 rounded-lg mt-1 mb-3' />
             <h2>Date</h2>
             <input onChange={(e) => {
               setDueDate(e.target.value)
@@ -94,7 +94,7 @@ const CreateTask = () => {
                   key={idx} className={`flex items-center gap-2 active:scale-95 border border-(--purple)/30 py-1.5 px-3 rounded-2xl cursor-pointer transition 
                 ${priority === e.lable
                       ? 'bg-(--light-pink) text-black'
-                      : 'hover:bg-(--purple)/50 hover:border-(--purple) bg-[#121432]/50'}`}>
+                      : 'hover:bg-(--purple)/30 hover:border-(--purple) bg-[#121432]/50'}`}>
                   <div className={`w-2 h-2 rounded-full ${e.dot}`}></div>
                   {e.lable}
                 </div>
@@ -105,7 +105,7 @@ const CreateTask = () => {
             <div className='flex flex-col gap-1'>
               <div className='flex justify-between px-2'>
                 <h2>Description</h2>
-                <span className={taskDescription.length < MAX_DESC * 0.9 ? 'text-(--light-pink)' : 'text-amber-400'}>
+                <span className={`text-(--light-pink)/50 ${taskDescription.length < MAX_DESC * 0.9 ? 'text-(--light-pink)' : 'text-amber-400'}`}>
                   {`${taskDescription.length} / ${MAX_DESC}`}
                 </span>
               </div>
