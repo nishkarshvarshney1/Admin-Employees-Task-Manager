@@ -3,7 +3,8 @@ import {ChartNoAxesColumn, Plus, Settings, Users} from 'lucide-react'
 
 const QuickActions = ({setIsModalOpened}) => {
   return (
-    <div className='flex flex-col gap-2 p-5 rounded-2xl border border-(--border-color) mb-5 bg-(--dark-purple)'>
+    <div className='p-px rounded-2xl bg-linear-to-br from-(--purple) via-(--border-color) to-(--border-color) mb-5'>
+    <div className='flex flex-col gap-2 p-5 rounded-2xl bg-(--dark-purple)'>
       <h1 className='text-base'>Quick Actions</h1>
       <div className='grid grid-cols-2 gap-2'>
         <div onClick={()=>{
@@ -30,6 +31,7 @@ const QuickActions = ({setIsModalOpened}) => {
           <h4 className='text-[0.55rem] text-gray-400'>App preferences</h4>
         </div>
       </div>
+    </div>
     </div>
   )
 }

@@ -2,7 +2,8 @@ import React from 'react'
 
 const TaskStatus = () => {
     return (
-        <div className='text-xs flex flex-col gap-3 p-5 bg-(--dark-purple) rounded-2xl border border-(--border-color)'>
+        <div className='p-px rounded-2xl bg-linear-to-br from-(--purple) via-(--border-color) to-(--border-color)'>
+        <div className='text-xs flex flex-col gap-3 p-5 bg-(--dark-purple) rounded-2xl'>
             <h2 className='text-base'>Task Status</h2>
             <div className='flex items-center justify-between'>
                 <div id='pie-chart' className='h-30 w-30 rounded-full flex items-center justify-center'>
@@ -42,6 +43,7 @@ const TaskStatus = () => {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     )
 }

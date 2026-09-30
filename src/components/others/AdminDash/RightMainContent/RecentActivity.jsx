@@ -2,7 +2,8 @@ import React from 'react'
 
 const RecentActivity = () => {
     return (
-        <div className='flex flex-col gap-7 bg-(--dark-purple) p-5 rounded-2xl border border-(--border-color)'>
+        <div className='p-px rounded-2xl bg-linear-to-br from-(--purple) via-(--border-color) to-(--border-color)'>
+        <div className='flex flex-col gap-7 bg-(--dark-purple) p-5 rounded-2xl'>
             <div className='flex justify-between items-center'>
                 <h1 className='text-base'>Recent Activity</h1>
                 <h3 className='text-xs text-(--purple)'>View All</h3>
@@ -45,6 +46,7 @@ const RecentActivity = () => {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     )
 }
