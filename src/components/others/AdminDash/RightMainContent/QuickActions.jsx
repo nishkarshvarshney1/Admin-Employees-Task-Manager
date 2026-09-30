@@ -9,7 +9,7 @@ const QuickActions = ({setIsModalOpened}) => {
         <div onClick={()=>{
           setIsModalOpened(true)
         }}
-         className='bg-linear-to-br from-(--purple)/80 to-(--dark-purple)/10 p-3 rounded-lg flex flex-col gap-px border border-(--border-color)'>
+         className='bg-linear-to-br from-(--purple)/80 to-(--dark-purple)/10 cursor-pointer p-3 rounded-lg flex flex-col gap-px border border-(--border-color)'>
            <div className='w-5 h-5 rounded-full bg-(--light-pink) flex items-center justify-center mb-1'><Plus size={16} strokeWidth={3} stroke="var(--dark-purple)"/></div>
           <h3 className='text-[0.65rem]'>Create Task</h3>
           <h4 className='text-[0.55rem] text-gray-400'>Assign a new task</h4>

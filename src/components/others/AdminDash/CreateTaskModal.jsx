@@ -3,10 +3,10 @@ import { AuthContext } from '../../../context/AuthProvider'
 import { Plus, X, Type, CalendarDays, UserRound, AlignLeft, Check } from 'lucide-react'
 
 const PRIORITIES = [
-  { label: 'Design', dot: 'bg-fuchsia-400' },
-  { label: 'Development', dot: 'bg-sky-400' },
-  { label: 'Marketing', dot: 'bg-amber-300' },
-  { label: 'Research', dot: 'bg-emerald-400' },
+  { label: 'Low', dot: 'bg-fuchsia-400' },
+  { label: 'Medium', dot: 'bg-sky-400' },
+  { label: 'High', dot: 'bg-amber-300' },
+  { label: 'Very High', dot: 'bg-emerald-400' },
 ]
 
 const MAX_DESC = 500
