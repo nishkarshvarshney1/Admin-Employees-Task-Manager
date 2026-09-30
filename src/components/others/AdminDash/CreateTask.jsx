@@ -18,6 +18,7 @@ const CreateTask = () => {
     taskDescription,
     taskData: { assignedTo, priority, dueDate }
   }
+  const MAX_DESC = 500
   const submitHandler = (e) => {
     e.preventDefault()
     const data = structuredClone(employees)
@@ -38,7 +39,7 @@ const CreateTask = () => {
     setTaskTitle('')
   }
   return (
-    <div className='p-5 flex flex-col gap-3 text-(--light-pink) bg-(--dark-purple) rounded-lg border border-(--border-color)'>
+    <div className='p-5 pb-7 flex flex-col gap-3 text-(--light-pink) bg-(--dark-purple) rounded-2xl border border-(--border-color)'>
       <div className='flex items-center gap-2'>
         <div className='w-5 h-5 rounded-full bg-(--light-pink) flex items-center justify-center'><Plus size={16} strokeWidth={3} stroke="var(--dark-purple)"/></div>
       <h1 className='text-base'>Create New Task</h1>
@@ -53,36 +54,39 @@ const CreateTask = () => {
             setTaskTitle(e.target.value)
           }}
             value={taskTitle}
-            type="text" placeholder='Make a UI design' className='border border-[#62679C] px-2 py-2 rounded-sm mt-1 mb-3' />
+            type="text" placeholder='Make a UI design' className='border border-[#62679C] py-2.5 px-3 rounded-lg mt-1 mb-3' />
           <h2>Date</h2>
           <input onChange={(e) => {
             setDueDate(e.target.value)
           }}
             value={dueDate}
-            type="date" className='border border-[#62679C] px-2 py-2 rounded-sm mt-1 mb-3 [&::-webkit-calendar-picker-indicator]:invert' />
+            type="date" className='border border-[#62679C] py-2.5 px-3 rounded-lg mt-1 mb-3 [&::-webkit-calendar-picker-indicator]:invert' />
           <h2>Assign To</h2>
           <input onChange={(e) => {
             setAssignedTo(e.target.value)
           }}
             value={assignedTo}
-            type="text" placeholder='Name...' className='border border-[#62679C] px-2 py-2 mt-1 rounded-sm mb-3' />
+            type="text" placeholder='Name...' className='border border-[#62679C] py-2.5 px-3 mt-1 rounded-lg mb-3' />
           <h2>Priority</h2>
           <input onChange={(e) => {
             setPriority(e.target.value)
           }}
             value={priority}
-            type="text" placeholder='Design, Development, etc...' className='border border-[#62679C] px-2 py-2 mt-1 rounded-sm' />
+            type="text" placeholder='Design, Development, etc...' className='border border-[#62679C] py-2.5 px-3 mt-1 rounded-lg' />
         </div>
         <div className='flex flex-col justify-between'>
         <div className='flex flex-col gap-1'>
-          <h2>Description</h2>
+          <div className='flex justify-between px-2'>
+            <h2>Description</h2>
+            {`${taskDescription.length} / ${MAX_DESC}`}
+          </div>
           <textarea onChange={(e) => {
             setTaskDescription(e.target.value)
           }}
             value={taskDescription}
-            placeholder="Detailed description of the task (Max 500 word)" className='border-[#62679C] border rounded-sm p-2 h-49 mt-1' cols="50"></textarea>
+            placeholder="Detailed description of the task" className='border-[#62679C] border rounded-xl py-2.5 px-3 h-52 mt-2 transition' cols="55"></textarea>
             </div>
-          <button className='bg-(--purple) py-3 rounded-sm hover:bg-green-300/70 transition cursor-pointer active:scale-90 hover:scale-101'>Create Task</button>
+          <button className='bg-(--purple) py-3 rounded-xl hover:bg-green-300/70 transition cursor-pointer active:scale-90 hover:scale-101'>Create Task</button>
           </div>
       </form>
     </div>

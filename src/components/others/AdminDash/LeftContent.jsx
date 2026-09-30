@@ -15,7 +15,7 @@ const LeftContent = ({ handleLogout }) => {
       </div>
       <Menu />
       <button onClick={handleLogout}
-        className='absolute z-11 bottom-10 left-10 flex gap-3 text-sm items-center hover:bg-(--purple)/20 cursor-pointer py-3 px-4 rounded-lg'>
+        className='absolute z-11 bottom-10 left-10 flex gap-3 text-sm items-center hover:bg-(--purple)/20 cursor-pointer py-3 px-4 rounded-full'>
         <LogOut />
         <span>Log Out</span>
       </button>

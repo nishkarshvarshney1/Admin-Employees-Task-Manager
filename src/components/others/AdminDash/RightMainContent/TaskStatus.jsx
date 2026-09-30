@@ -2,7 +2,7 @@ import React from 'react'
 
 const TaskStatus = () => {
     return (
-        <div className='text-xs flex flex-col gap-3 p-5 bg-(--dark-purple) rounded-lg border border-(--border-color)'>
+        <div className='text-xs flex flex-col gap-3 p-5 bg-(--dark-purple) rounded-2xl border border-(--border-color)'>
             <h2 className='text-base'>Task Status</h2>
             <div className='flex items-center justify-between'>
                 <div id='pie-chart' className='h-30 w-30 rounded-full flex items-center justify-center'>

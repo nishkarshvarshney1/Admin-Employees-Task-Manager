@@ -3,7 +3,7 @@ import {CalendarRange} from 'lucide-react'
 
 const TotalNewTask = () => {
   return (
-    <div className='flex w-[24%] bg-(--purple) items-center justify-between py-3.5 px-5 rounded-lg border border-(--border-color)'>
+    <div className='flex w-[24%] bg-(--purple) items-center justify-between py-3.5 px-5 rounded-2xl border border-(--border-color)'>
         <CalendarRange size={25}/>
         <div>
             <h2 className='text-xl'>24</h2>

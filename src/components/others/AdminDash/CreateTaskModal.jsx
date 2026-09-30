@@ -3,10 +3,10 @@ import { AuthContext } from '../../../context/AuthProvider'
 import { Plus, X, Type, CalendarDays, UserRound, AlignLeft, Check } from 'lucide-react'
 
 const PRIORITIES = [
-  { label: 'Low', dot: 'bg-fuchsia-400' },
-  { label: 'Medium', dot: 'bg-sky-400' },
-  { label: 'High', dot: 'bg-amber-300' },
-  { label: 'Very High', dot: 'bg-emerald-400' },
+  { label: 'Low', dot: 'bg-emerald-400' },
+  { label: 'Medium', dot: 'bg-amber-400' },
+  { label: 'High', dot: 'bg-fuchsia-400' },
+  { label: 'Very High', dot: 'bg-red-500' },
 ]
 
 const MAX_DESC = 500
@@ -166,7 +166,7 @@ const CreateTaskModal = ({ setIsModalOpened }) => {
               </div>
 
               <div className='flex flex-col gap-2'>
-                <span className='text-xs font-medium text-(--light-pink)/70'>Category</span>
+                <span className='text-xs font-medium text-(--light-pink)/70'>Priority</span>
                 <div className='flex flex-wrap gap-2'>
                   {PRIORITIES.map((p) => {
                     const active = priority === p.label
@@ -211,7 +211,7 @@ const CreateTaskModal = ({ setIsModalOpened }) => {
                   </span>
                 </span>
                 <textarea
-                  value={taskDescription}
+                  value={taskDescription} 
                   maxLength={MAX_DESC}
                   onChange={(e) => setTaskDescription(e.target.value)}
                   placeholder='What needs to be done, and what does done look like?'

@@ -3,7 +3,7 @@ import {ArrowUp, Check} from 'lucide-react'
 
 const TotalCompletedTask = () => {
   return (
-    <div className='flex w-[24%] backdrop-blur-xs border border-(--border-green) items-center justify-between bg-linear-to-r from-(--green)/50 to-(--dark-purple) py-3.5 px-5 rounded-lg '>
+    <div className='flex w-[24%] backdrop-blur-xs border border-(--border-green) items-center justify-between bg-linear-to-r from-(--green)/50 to-(--dark-purple) py-3.5 px-5 rounded-2xl '>
         <div className='p-1 bg-green-400 rounded-full text-(--dark-purple)'>
             <Check size={20} strokeWidth={3}/>
         </div>

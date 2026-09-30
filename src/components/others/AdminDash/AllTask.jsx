@@ -4,7 +4,7 @@ import { AuthContext } from '../../../context/AuthProvider';
 const AllTask = () => {
   const employees = useContext(AuthContext).employees
   return (
-    <div className='p-5 flex flex-col gap-3 bg-(--dark-purple) rounded-lg border border-(--border-color) mb-5'>
+    <div className='p-5 flex flex-col gap-3 bg-(--dark-purple) rounded-2xl border border-(--border-color) mb-5'>
       <h1 className='text-base'>Employee Task Overview</h1>
       <div className='w-full flex flex-col text-xs gap-1 bg-(--dark-purple) rounded-lg overflow-hidden'>
         <div className='grid grid-cols-6 place-items-center w-full bg-[#232755] p-3 rounded-sm'>
