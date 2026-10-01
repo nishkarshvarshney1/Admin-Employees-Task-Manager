@@ -25,15 +25,6 @@
     display: none;
 }
 
-#pie-chart {
-    background: conic-gradient(
-        blue 0% 20%,
-        yellow 20% 50%,
-        green 50% 65%,
-        red 65% 100%
-    );
-}
-
 #total-tasks {
     background: linear-gradient(
         to right,

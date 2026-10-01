@@ -1,13 +1,7 @@
-import React, { useContext, useState } from 'react'
-import { ArrowUp, CalendarRange } from 'lucide-react'
-import { AuthContext } from '../../../../context/AuthProvider';
 
-const TotalNewTask = () => {
-  const { employees } = useContext(AuthContext)
-  const totalNewTask = employees.reduce((total, e) => {
-    const data = Object.values(e)[0]
-    return total + data.newTask
-  }, 0)
+import { ArrowUp, CalendarRange } from 'lucide-react'
+
+const TotalNewTask = ({newTask}) => {
   return (
     <div className='p-px rounded-2xl w-[24%] bg-linear-to-bl from-(--purple) via-(--border-color) to-(--border-color)'>
       <div id='total-tasks' className='flex  items-center justify-between py-3.5 px-5 rounded-2xl backdrop-blur-xs'>
@@ -16,7 +10,7 @@ const TotalNewTask = () => {
         </div>
         <div>
           <h2 className='text-xl'>
-        {totalNewTask}
+        {newTask}
           </h2>
           <h4 className='text-[0.65rem]'>New Tasks</h4>
         </div>
