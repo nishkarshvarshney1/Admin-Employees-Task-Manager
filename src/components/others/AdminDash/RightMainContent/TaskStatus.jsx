@@ -10,7 +10,6 @@ const TaskStatus = ({ totals }) => {
     const newTaskP = totals.newTask / total * 100
     const activeP = (totals.active / total * 100) + newTaskP
     const completedP = (totals.completed / total * 100) + activeP
-    console.log(newTaskP,activeP,completedP)
     return (
         <div className='p-px rounded-2xl bg-linear-to-br from-(--purple) via-(--border-color) to-(--border-color)'>
             <div className='text-xs flex flex-col gap-3 p-5 bg-(--dark-purple) rounded-2xl'>

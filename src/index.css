@@ -24,11 +24,3 @@
 .no-scrollbar::-webkit-scrollbar {
     display: none;
 }
-
-#total-tasks {
-    background: linear-gradient(
-        to right,
-        #6f4fe576,
-        #181a43
-    )
-}

@@ -1,7 +1,29 @@
+import { useEffect, useState } from 'react';
 import Hero from '../../../assets/image header.png'
 import { CalendarDays, ChevronDown } from 'lucide-react'
 
 const Header = ({ currentUser }) => {
+    const [time, setTime] = useState(new Date())
+    useEffect(() => {
+      const timer = setInterval(()=>{
+        setTime(new Date())
+      }, 1000)
+    
+      return () => {
+        clearInterval(timer)
+      }
+    }, [])
+    const currentDate = time.toLocaleDateString('en-US', {
+        weekday: 'short',
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric'
+    })
+    const currentTime = time.toLocaleTimeString('en-US', {
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true,
+    }).replace(':', ' : ')
     const storage = localStorage.getItem('loggedInUser') ? localStorage : sessionStorage
     const user = JSON.parse(storage.getItem('loggedInUser')).role
     return (
@@ -27,8 +49,8 @@ const Header = ({ currentUser }) => {
                 </button>
                 <div className='p-px rounded-2xl bg-linear-to-br from-(--purple) via-(--border-color) to-(--purple)'>
                     <div className='rounded-2xl p-3 bg-(--dark-purple)'>
-                        <h6 className='text-xs flex items-center gap-2'><CalendarDays size={14} />Wed, Sep 23, 2026</h6>
-                        <h6 className='text-lg'>11 : 14 PM</h6>
+                        <h6 className='text-xs flex items-center gap-2'><CalendarDays size={14} /><p>{currentDate}</p></h6>
+                        <h6 className='text-lg'>{currentTime} </h6>
                         <h6 className='text-[0.65rem]'>"Small steps, big progress."</h6>
                     </div>
                 </div>

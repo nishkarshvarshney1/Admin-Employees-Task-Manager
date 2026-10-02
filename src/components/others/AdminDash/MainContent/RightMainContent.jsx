@@ -9,7 +9,7 @@ const RightMainContent = ({setIsModalOpened, totals}) => {
         <TaskStatus totals={totals}/>
         <RecentActivity />
         <QuickActions setIsModalOpened={setIsModalOpened}/>
-    </div>  
+    </div>
   )
 }
 
