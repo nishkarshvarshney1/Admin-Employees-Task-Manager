@@ -6,14 +6,14 @@ import TotalFailedTask from '../TotalTaskList/TotalFailedTask';
 import TotalTasks from '../TotalTaskList/TotalTasks';
 
 
-const TopTaskContent = () => {
+const TopTaskContent = ({totals}) => {
     return (
         <div className='relative z-11 flex justify-between gap-3'>
-            <TotalTasks />
-            <TotalNewTask />
-            <TotalActiveTask />
-            <TotalCompletedTask />
-            <TotalFailedTask />
+            <TotalTasks totals={totals}/>
+            <TotalNewTask newTask={totals.newTask} />
+            <TotalActiveTask active={totals.active}/>
+            <TotalCompletedTask completed={totals.completed} />
+            <TotalFailedTask failed={totals.failed}/>
         </div>
     )
 }

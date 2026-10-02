@@ -1,7 +1,7 @@
 import { CalendarRange, Plus, Search } from 'lucide-react';
 import React from 'react'
 
-const BottomTaskContent = () => {
+const BottomTaskContent = ({setIsModalOpened}) => {
     return (
         <div className='p-px bg-linear-to-br from-(--purple) via-(--border-color) to-(--border-color) relative z-11 rounded-2xl'>
             <div className=' bg-(--dark-purple) rounded-2xl flex flex-col p-5 gap-4'>
@@ -14,7 +14,10 @@ const BottomTaskContent = () => {
                         </div>
                     </div>
                     <div>
-                        <button className='flex gap-2 px-4 py-3 rounded-xl text-base bg-linear-to-r from-(--purple)/70 cursor-pointer transition hover:bg-(--purple) to-(--border-color)'><Plus />Create Task</button>
+                        <button onClick={()=>{
+                            setIsModalOpened(true)
+                        }}
+                         className='flex gap-2 px-4 py-3 rounded-xl text-base bg-linear-to-r from-(--purple)/70 cursor-pointer transition hover:bg-(--purple) to-(--border-color)'><Plus />Create Task</button>
                     </div>
                 </div>
                 <div className='flex items-center gap-3 text-sm'>
