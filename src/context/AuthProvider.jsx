@@ -12,6 +12,7 @@ const AuthProvider = ({ children }) => {
     }
     setLocalStorage()
     return JSON.parse(localStorage.getItem('employees'))
+    
   })
   const [admin] = useState(()=>{
     const storedAdmin = localStorage.getItem('admin')
