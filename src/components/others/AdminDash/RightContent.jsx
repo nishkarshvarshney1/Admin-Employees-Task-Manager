@@ -22,7 +22,7 @@ const RightContent = ({ handleLogout, setIsModalOpened }) => {
     failed: 0
   })
   return (
-    <div className='w-[85%] bg-(--very-dark) px-5 relative flex flex-col'>
+    <div className='w-[85%] bg-(--very-dark) px-5 relative flex flex-col flex-1'>
       <Header handleLogout={handleLogout} />
       <AllTaskPage setIsModalOpened={setIsModalOpened} totals={totals} />
       {/* <MainContent totals={totals}/> */}
