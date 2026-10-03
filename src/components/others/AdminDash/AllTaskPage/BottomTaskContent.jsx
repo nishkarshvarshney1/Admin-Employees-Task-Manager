@@ -43,16 +43,18 @@ const BottomTaskContent = ({ setIsModalOpened }) => {
                         <h4 className='flex items-center gap-2'>Actions</h4>
                     </div>
                     <div className='h-73.5 divide-y divide-(--border-color) overflow-auto'>
-                        {employees.map((e) => {
-                            const data = Object.values(e)[0].tasks
+                        {employees.map((e)=>{
+                            const data = Object.values(e)[0]
                             return (
-                                data.map((e)=>
-                                    e.newTask === true && <TaskDiv />
-                                )
+                                <>
+                                {data.tasks.filter((e)=>e.newTask).map(()=> <TaskDiv />)}
+                                {data.tasks.filter((e)=>e.active).map(()=> <TaskDiv />)}
+                                {data.tasks.filter((e)=>e.completed).map(()=> <TaskDiv />)}
+                                {data.tasks.filter((e)=>e.failed).map(()=> <TaskDiv />)}
+                                </>
                             )
                         })}
                     </div>
-
                 </div>
                 <footer className='flex items-center justify-between flex-1'>
                     <span className='text-(--light-pink)/75 text-sm'>Showing 1-6 of 54 tasks</span>
