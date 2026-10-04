@@ -1,4 +1,4 @@
-import { CalendarRange, ChevronLeft, ChevronRight, MoveVertical, Plus, Search } from 'lucide-react';
+import { ArrowBigDown, ArrowDown, CalendarRange, ChevronDown, ChevronLeft, ChevronRight, MoveVertical, Plus, Search } from 'lucide-react';
 import React, { useContext } from 'react'
 import TaskDiv from './table/TaskDiv';
 import { AuthContext } from '../../../../context/AuthProvider';
@@ -28,8 +28,26 @@ const BottomTaskContent = ({ setIsModalOpened }) => {
                         <input type="text" placeholder='Search tasks, description...' className='w-full border border-(--border-color) py-2 pr-3 pl-12 rounded-lg' />
                         <Search size={18} className='absolute left-4 top-1/2 -translate-y-1/2' />
                     </div>
-                    <div className='p-2 pl-4 border border-(--border-color) rounded-lg w-[15%] '>All Status</div>
-                    <div className='p-2 pl-4 border border-(--border-color) rounded-lg w-[15%]'>All Proirity</div>
+                    <div className='w-[15%] relative'>
+                        <select className='p-2 pl-4 border border-(--border-color) rounded-lg appearance-none w-full'>
+                            <option value='none'>All Status</option>
+                            <option value="newTask">New Task</option>
+                            <option value="active">Active</option>
+                            <option value="completed">Completed</option>
+                            <option value="failed">Failed</option>
+                        </select>
+                        <ChevronDown size={15} className='absolute right-3 top-1/2 -translate-y-1/2' />
+                    </div>
+                    <div className='w-[15%] relative'>
+                        <select className='p-2 pl-4 border border-(--border-color) rounded-lg  appearance-none w-full'>
+                            <option value="none">All Proirity</option>
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                            <option value="very high">Very High</option>
+                        </select>
+                        <ChevronDown size={15} className='absolute right-3 top-1/2 -translate-y-1/2' />
+                    </div>
                     <div className='p-2 pl-4 border border-(--border-color) rounded-lg w-[20%]'>Due Date (Newest)</div>
                 </div>
                 <div className=' border border-(--border-color) rounded-2xl flex-1 min-h-0 overflow-hidden flex flex-col'>
@@ -41,33 +59,22 @@ const BottomTaskContent = ({ setIsModalOpened }) => {
                         <h4 className='flex items-center gap-2'>Status <MoveVertical size={14} stroke='#8286B8' /></h4>
                         <h4 className='flex items-center gap-2 justify-self-center'>Actions</h4>
                     </div>
-                    <div className='divide-y divide-(--border-color) flex-1 min-h-0  overflow-y-auto no-scrollbar'>
-                        {employees.map((e)=>{
+                    <div className='divide-y divide-(--border-color) flex-1 min-h-0 overflow-y-auto'>
+                        {employees.map((e) => {
                             const data = Object.values(e)[0]
                             return (
                                 <>
-                                {data.tasks.filter((e)=>e.newTask).map((tasks, idx)=> <TaskDiv key={idx} tasks={tasks} data={data}/>)}
-                                {data.tasks.filter((e)=>e.active).map((tasks, idx)=> <TaskDiv key={idx} tasks={tasks} data={data}/>)}
-                                {data.tasks.filter((e)=>e.completed).map((tasks, idx)=> <TaskDiv key={idx} tasks={tasks} data={data}/>)}
-                                {data.tasks.filter((e)=>e.failed).map((tasks, idx)=> <TaskDiv key={idx} tasks={tasks} data={data}/>)}
+                                    {data.tasks.filter((e) => e.newTask).map((tasks, idx) => <TaskDiv key={idx} tasks={tasks} data={data} />)}
+                                    {data.tasks.filter((e) => e.active).map((tasks, idx) => <TaskDiv key={idx} tasks={tasks} data={data} />)}
+                                    {data.tasks.filter((e) => e.completed).map((tasks, idx) => <TaskDiv key={idx} tasks={tasks} data={data} />)}
+                                    {data.tasks.filter((e) => e.failed).map((tasks, idx) => <TaskDiv key={idx} tasks={tasks} data={data} />)}
                                 </>
                             )
                         })}
                     </div>
                 </div>
-                <footer className='flex items-center justify-between'>
-                    <span className='text-(--light-pink)/75 text-sm'>Showing 1-6 of 54 tasks</span>
-                    <div className='flex gap-2 text-xs'>
-                        <button className='h-7 w-7 border border-(--border-color) rounded-lg bg-(--border-color)/80 flex justify-center items-center cursor-pointer'><ChevronLeft size={18} /></button>
-                        <button className='h-7 w-7 border border-(--border-color) rounded-lg bg-(--border-color)/80 cursor-pointer'>1</button>
-                        <button className='h-7 w-7 border border-(--border-color) rounded-lg bg-(--border-color)/80 cursor-pointer'>2</button>
-                        <button className='h-7 w-7 border border-(--border-color) rounded-lg bg-(--border-color)/80 cursor-pointer'>3</button>
-                        <button className='h-7 w-7 border border-(--border-color) rounded-lg bg-(--border-color)/80 cursor-pointer'>4</button>
-                        <button className='h-7 w-7 border border-(--border-color) rounded-lg bg-(--border-color)/80 cursor-pointer'>5</button>
-                        <button className='h-7 w-7 border border-(--border-color) rounded-lg bg-(--border-color)/80 cursor-pointer'>6</button>
-                        <button className='h-7 w-7 border border-(--border-color) rounded-lg bg-(--border-color)/80 cursor-pointer'>7</button>
-                        <button className='h-7 w-7 border border-(--border-color) rounded-lg bg-(--border-color)/80 flex justify-center items-center cursor-pointer'><ChevronRight size={18} /></button>
-                    </div>
+                <footer className='flex justify-center'>
+                    <span className='text-(--light-pink)/75 text-xs flex items-center gap-1'>Scroll <ArrowBigDown size={14} /> to see all tasks</span>
                 </footer>
             </div>
         </div>
