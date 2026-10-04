@@ -5,7 +5,7 @@ import TotalTask from './TotalTask';
 import AllTaskPage from './AllTaskPage/AllTaskPage';
 import { AuthContext } from '../../../context/AuthProvider';
 
-const RightContent = ({ handleLogout, setIsModalOpened }) => {
+const RightContent = ({ handleLogout, setIsModalOpened, pageOpened }) => {
   const { employees } = useContext(AuthContext)
   const totals = employees.reduce((total, e) => {
     const data = Object.values(e)[0]
@@ -24,8 +24,12 @@ const RightContent = ({ handleLogout, setIsModalOpened }) => {
   return (
     <div className='w-[85%] bg-(--very-dark) px-5 relative flex flex-col flex-1 min-h-0'>
       <Header handleLogout={handleLogout} />
-      <AllTaskPage setIsModalOpened={setIsModalOpened} totals={totals} />
-      {/* <MainContent totals={totals}/> */}
+      {pageOpened === 'dashboard'
+        ? <MainContent totals={totals} />
+        : pageOpened === 'allTask'
+          ? <AllTaskPage setIsModalOpened={setIsModalOpened} totals={totals} />
+          : null
+      }
     </div>
   )
 }

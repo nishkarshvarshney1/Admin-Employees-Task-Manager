@@ -7,7 +7,7 @@ const BottomTaskContent = ({ setIsModalOpened }) => {
     const { employees } = useContext(AuthContext)
     return (
         <div className='p-px bg-linear-to-br from-(--purple) via-(--border-color) to-(--border-color) mb-5 relative z-11 rounded-2xl flex-1 min-h-0'>
-            <div className=' bg-(--dark-purple) rounded-2xl flex-col p-5 gap-4 text-sm h-full flex'>
+            <div className=' bg-(--dark-purple) rounded-2xl flex-col p-5 gap-4 text-sm h-full text-(--light-pink) flex'>
                 <div className='flex items-center justify-between'>
                     <div className='flex items-center gap-4'>
                         <CalendarRange size={25} />
@@ -39,7 +39,7 @@ const BottomTaskContent = ({ setIsModalOpened }) => {
                         <h4 className='flex items-center gap-2'>Due date <MoveVertical size={14} stroke='#8286B8' /></h4>
                         <h4 className='flex items-center gap-2'>Priority <MoveVertical size={14} stroke='#8286B8' /></h4>
                         <h4 className='flex items-center gap-2'>Status <MoveVertical size={14} stroke='#8286B8' /></h4>
-                        <h4 className='flex items-center gap-2'>Actions</h4>
+                        <h4 className='flex items-center gap-2 justify-self-center'>Actions</h4>
                     </div>
                     <div className='divide-y divide-(--border-color) flex-1 min-h-0  overflow-y-auto no-scrollbar'>
                         {employees.map((e)=>{

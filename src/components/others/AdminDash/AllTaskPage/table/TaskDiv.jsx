@@ -5,12 +5,12 @@ const TaskDiv = ({ tasks, data }) => {
   console.log(tasks)
   return (
     <div className='grid grid-cols-[2fr_1.3fr_1fr_1fr_1fr_0.7fr] items-center py-1.5 px-4'>
-      <div>
+      <div className='mr-10'>
         <h2>{tasks.taskTitle}</h2>
         <p className='line-clamp-1 text-xs text-(--light-pink)/80'>{tasks.taskDescription}</p>
       </div>
-      <div className='flex items-center'>
-        <div></div>
+      <div className='flex items-center gap-2.5'>
+        <div className='h-7 w-7 bg-(--purple) rounded-full'></div>
         <span>{data.name}</span>
       </div>
       <span className='items-center flex'>{tasks.taskData.dueDate}</span>
@@ -31,7 +31,7 @@ const TaskDiv = ({ tasks, data }) => {
                   ? 'Failed' : null}
         </span>
       </div>
-      <button><Ellipsis /></button>
+      <button className='justify-self-center px-2.5 rounded-lg cursor-pointer py-1 bg-(--border-color)'><Ellipsis /></button>
     </div>
   )
 }

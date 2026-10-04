@@ -4,7 +4,7 @@ import { LogOut } from 'lucide-react';
 import Mountain from '../../../assets/Purple and White Mountains.png'
 import dusk from '../../../assets/image23.png'
 
-const LeftContent = ({ handleLogout }) => {
+const LeftContent = ({ handleLogout, setPageOpened, pageOpened }) => {
   const storage = localStorage.getItem('loggedInUser') ? localStorage : sessionStorage
   const user = JSON.parse(storage.getItem('loggedInUser')).role
   return (
@@ -13,7 +13,7 @@ const LeftContent = ({ handleLogout }) => {
         <img src={Mountain} alt="" className='h-12' />
         <h1 className='text-lg'>Task Manager</h1>
       </div>
-      <Menu />
+      <Menu setPageOpened={setPageOpened} pageOpened={pageOpened}/>
       <button onClick={handleLogout}
         className='absolute z-11 bottom-10 left-10 flex gap-3 text-sm items-center hover:bg-(--purple)/20 cursor-pointer py-3 px-4 rounded-full'>
         <LogOut />
