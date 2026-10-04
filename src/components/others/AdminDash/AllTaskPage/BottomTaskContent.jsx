@@ -46,10 +46,10 @@ const BottomTaskContent = ({ setIsModalOpened }) => {
                             const data = Object.values(e)[0]
                             return (
                                 <>
-                                {data.tasks.filter((e)=>e.newTask).map((tasks, idx)=> <TaskDiv key={idx} tasks={tasks}/>)}
-                                {data.tasks.filter((e)=>e.active).map((tasks, idx)=> <TaskDiv key={idx} tasks={tasks}/>)}
-                                {data.tasks.filter((e)=>e.completed).map((tasks, idx)=> <TaskDiv key={idx} tasks={tasks}/>)}
-                                {data.tasks.filter((e)=>e.failed).map((tasks, idx)=> <TaskDiv key={idx} tasks={tasks}/>)}
+                                {data.tasks.filter((e)=>e.newTask).map((tasks, idx)=> <TaskDiv key={idx} tasks={tasks} data={data}/>)}
+                                {data.tasks.filter((e)=>e.active).map((tasks, idx)=> <TaskDiv key={idx} tasks={tasks} data={data}/>)}
+                                {data.tasks.filter((e)=>e.completed).map((tasks, idx)=> <TaskDiv key={idx} tasks={tasks} data={data}/>)}
+                                {data.tasks.filter((e)=>e.failed).map((tasks, idx)=> <TaskDiv key={idx} tasks={tasks} data={data}/>)}
                                 </>
                             )
                         })}
