@@ -8,7 +8,7 @@ const BottomTaskContent = ({ setIsModalOpened }) => {
     const { employees } = useContext(AuthContext)
     return (
         <div className='p-px bg-linear-to-br from-(--purple) via-(--border-color) to-(--border-color) mb-5 relative z-11 rounded-2xl flex-1'>
-            <div className=' bg-(--dark-purple) rounded-2xl flex flex-col p-5 gap-4 text-sm h-full'>
+            {/* <div className=' bg-(--dark-purple) rounded-2xl flex-col p-5 gap-4 text-sm h-full hidden'>
                 <div className='flex items-center justify-between'>
                     <div className='flex items-center gap-4'>
                         <CalendarRange size={25} />
@@ -42,7 +42,7 @@ const BottomTaskContent = ({ setIsModalOpened }) => {
                         <h4 className='flex items-center gap-2'>Status <MoveVertical size={14} stroke='#8286B8' /></h4>
                         <h4 className='flex items-center gap-2'>Actions</h4>
                     </div>
-                    <div className='h-73.5 divide-y divide-(--border-color) overflow-auto'>
+                    <div className='divide-y divide-(--border-color) overflow-auto'>
                         {employees.map((e)=>{
                             const data = Object.values(e)[0]
                             return (
@@ -70,7 +70,7 @@ const BottomTaskContent = ({ setIsModalOpened }) => {
                         <button className='h-7 w-7 border border-(--border-color) rounded-lg bg-(--border-color)/80 flex justify-center items-center cursor-pointer'><ChevronRight size={18} /></button>
                     </div>
                 </footer>
-            </div>
+            </div> */}
         </div>
     )
 }

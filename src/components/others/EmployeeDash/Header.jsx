@@ -36,7 +36,7 @@ const Header = ({ currentUser }) => {
                 </h2>
                 <h6 className='text-sm tracking-wide text-gray-300'>Manage tasks, track progress and keep your team productive.</h6>
             </div>
-            <div className='flex flex-col gap-6'>
+            <div className='flex flex-col gap-2'>
                 <button className='flex items-center gap-2 border border-(--border-color) cursor-pointer rounded-full w-fit py-1 px-3 bg-(--very-dark)'>
                     <div className='w-10 h-10 rounded-full bg-purple-400'></div>
                     <span>
