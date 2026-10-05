@@ -39,22 +39,6 @@ const Menu = ({ setPageOpened, pageOpened }) => {
             <House size={20} />
             <span>Dashboard</span>
           </div>
-          <div className='p-3 rounded-full flex gap-3 text-sm items-center cursor-pointer hover:bg-(--purple)/20'>
-            <Logs size={20} />
-            <span>My Tasks</span>
-          </div>
-          <div className='p-3 rounded-full flex gap-3 text-sm items-center cursor-pointer hover:bg-(--purple)/20'>
-            <Calendar size={20} />
-            <span>Calendar</span>
-          </div>
-          <div className='p-3 rounded-full flex gap-3 text-sm items-center cursor-pointer hover:bg-(--purple)/20'>
-            <Folder size={20} />
-            <span>Files</span>
-          </div>
-          <div className='p-3 rounded-full flex gap-3 text-sm items-center cursor-pointer hover:bg-(--purple)/20'>
-            <Settings size={20} />
-            <span>Settings</span>
-          </div>
         </>
       ) : null}
     </div>

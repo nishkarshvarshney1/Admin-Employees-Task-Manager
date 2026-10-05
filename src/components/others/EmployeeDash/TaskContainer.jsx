@@ -32,23 +32,23 @@ const TaskContainer = ({ userData }) => {
           <button onClick={() => {
             setFilterTasks('All')
           }}
-            className={`py-2 px-6 text-sm rounded-lg ${filterTasks === 'All' ? 'bg-[#793AFC] shadow-[0_0_4px_#793AFC]' : 'bg-[#22185D] '} cursor-pointer transition`}>All</button>
+            className={`py-2 px-6 text-sm rounded-lg ${filterTasks === 'All' ? 'bg-[#793AFC] ' : 'bg-[#22185D] '} cursor-pointer transition`}>All</button>
           <button onClick={() => {
             setFilterTasks('New')
           }}
-            className={`py-2 px-6  ${filterTasks === 'New' ? 'bg-[#793AFC] shadow-[0_0_4px_#793AFC]' : 'bg-[#22185D] '} text-sm rounded-lg cursor-pointer transition`}>New</button>
+            className={`py-2 px-6  ${filterTasks === 'New' ? 'bg-[#793AFC] ' : 'bg-[#22185D] '} text-sm rounded-lg cursor-pointer transition`}>New</button>
           <button onClick={() => {
             setFilterTasks('Accepted')
           }}
-            className={`py-2 px-6  ${filterTasks === 'Accepted' ? 'bg-[#793AFC] shadow-[0_0_4px_#793AFC]' : 'bg-[#22185D] '} text-sm rounded-lg cursor-pointer transition`}>Accepted</button>
+            className={`py-2 px-6  ${filterTasks === 'Accepted' ? 'bg-[#793AFC] ' : 'bg-[#22185D] '} text-sm rounded-lg cursor-pointer transition`}>Accepted</button>
           <button onClick={() => {
             setFilterTasks('Completed')
           }}
-            className={`py-2 px-6  ${filterTasks === 'Completed' ? 'bg-[#793AFC] shadow-[0_0_4px_#793AFC]' : 'bg-[#22185D] '} text-sm rounded-lg cursor-pointer transition`}>Completed</button>
+            className={`py-2 px-6  ${filterTasks === 'Completed' ? 'bg-[#793AFC] ' : 'bg-[#22185D] '} text-sm rounded-lg cursor-pointer transition`}>Completed</button>
           <button onClick={() => {
             setFilterTasks('Rejected')
           }}
-            className={`py-2 px-6  ${filterTasks === 'Rejected' ? 'bg-[#793AFC] shadow-[0_0_4px_#793AFC]' : 'bg-[#22185D] '} text-sm rounded-lg cursor-pointer transition`}>Rejected</button>
+            className={`py-2 px-6  ${filterTasks === 'Rejected' ? 'bg-[#793AFC] ' : 'bg-[#22185D] '} text-sm rounded-lg cursor-pointer transition`}>Rejected</button>
         </div>
         <div className='no-scrollbar flex flex-col w-full divide-y divide-(--border-color) overflow-y-auto min-h-0'>
           {filterTasks === 'All' ? (
