@@ -1,18 +1,14 @@
 import React from 'react'
-import Header from '../others/EmployeeDash/Header'
-import TaskList from '../others/EmployeeDash/TaskList'
-import TaskContainer from '../others/EmployeeDash/TaskContainer'
-import AcceptTask from '../TaskList/AcceptTask';
 import LeftContent from '../others/AdminDash/LeftContent'
 import EmployeesRightContent from '../others/EmployeeDash/EmployeesRightContent/EmployeesRightContent';
+import HeaderBg from '../others/AdminDash/HeaderBg';
 
 const EmployeeDash = ({handleLogout, userData}) => {
   return (
-    <div className='h-screen bg-[url(/main-bg.png)] bg-center bg-cover text-(--light-pink) flex relative'>
+    <div className='h-screen text-(--light-pink) flex relative bg-(--very-dark)'>
+      <HeaderBg />
       <LeftContent handleLogout={handleLogout}/>
       <EmployeesRightContent userData={userData} handleLogout={handleLogout}/>
-      {/* <TaskList userData={userData}/> */}
-      {/* <TaskContainer userData={userData}/> */}
       
     </div>
   )

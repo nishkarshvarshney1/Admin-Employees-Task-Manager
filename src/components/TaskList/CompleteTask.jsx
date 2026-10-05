@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 const CompleteTask = ({data}) => {
   const [expand, setExpand] = useState(false)
   return (
-    <div className='grid grid-cols-[1fr_1fr_1fr] gap-5 items-center backdrop-blur-lg px-5 py-3 border border-(--light-border) rounded-lg'>
+    <div className='grid grid-cols-[1fr_1fr_1fr] gap-5 items-center px-5 py-3 rounded-lg'>
       <div>
         <h1 className='text-base'>{data.taskTitle}</h1>
         <p onClick={()=>{
